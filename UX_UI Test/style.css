@@ -1,0 +1,71 @@
+/* ========== 1. Container พื้นหลัง ========== */
+#temple.templeall {
+  background-image: url('background.jpg');
+  background-size: cover;     /* ปรับให้ภาพไม่บิดเบี้ยว */
+  background-position: center;
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+/* ========== 2. ปรับคอลัมน์ ========== */
+#watthai.wat {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ตัวเลือกจำนวนคอลัมน์ (เพิ่ม/ลดได้ตามต้องการ) */
+.columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ========== 3. รูปภาพแต่ละวัด ========== */
+.item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#imagewatthai.imagewatthai2 {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;  /* ✅ ครอปภาพโดยไม่บิดเบี้ยว */
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.item p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* จุดควบคุม */
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  background-color: #333;
+}
